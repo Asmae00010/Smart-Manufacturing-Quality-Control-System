@@ -1,48 +1,29 @@
-RAG
-===========================
+Welcome to the Smart Manufacturing Quality Control System Documentation!
+=======================================================================
 
+This documentation provides a comprehensive overview of the Smart Manufacturing Quality Control System, which aims to enhance manufacturing quality control through advanced monitoring and analysis. 
 
-
-.. figure:: /Documentation/images/introo.jpg
-   :width: 100%
-   :alt: Alternative text for the image
-   :name: logo
-
-
-.. raw:: html
-
-    <p style="text-align: justify;"><span style="color:#000080;"><i>    
-    
-    In this article, I will explain the concept of Retrieval-Augmented Generation (RAG), providing numerous examples and discussing the advantages of using RAG models. RAG effectively combines the capabilities of retrieval systems and generative models to create more informed and contextually relevant outputs. Let’s dive into RAG in detail.
-   To illustrate the application of RAG, I will demonstrate how it can be implemented in a Streamlit application. Here, we can build an interactive interface that showcases the differences between various language models 
-    </i></span></p>
-
----------------------------------------------------------------------------
- 
-.. toctree::
-   :maxdepth: 3
-   :caption: Introduction
-
-   Documentation/scripts/Scope/introduction.rst
+Contents
+--------
 
 .. toctree::
-   :maxdepth: 4
-   :caption: Architecture
+   :maxdepth: 2
+   :caption: Table of Contents
 
+   introduction
 
+Getting Started
+---------------
+To get started with the Smart Manufacturing Quality Control System, please refer to the **Installation** section for setup instructions.
 
+Core Concept
+------------
+An overview of the system's core concept and components is available in the **Core Concept** section.
 
+For more detailed information about using the system, refer to the **Usage** section.
 
+For developers looking to contribute, see the **Contributing** section for guidelines.
 
-.. toctree::
-   :maxdepth: 4
-   :caption: Implimentation
-
-
-
-.. raw:: html
-
-    <p><span style="color:white;">'</p></span>
-
-
-
+License
+-------
+This project is licensed under the terms of the MIT License. See the `LICENSE` file for details.
