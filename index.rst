@@ -11,6 +11,12 @@ Contents
    :caption: Table of Contents
 
    introduction
+   core_concept
+   installation&usage
+   computer_vision
+   time_series_analysis
+   nlp_and_rag
+
 
 Getting Started
 ---------------
