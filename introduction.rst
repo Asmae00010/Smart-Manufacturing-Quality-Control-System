@@ -1,6 +1,4 @@
-.. _smart-manufacturing-quality-control-system:
 
-==========================
 Smart Manufacturing Quality Control System
 ==========================
 
