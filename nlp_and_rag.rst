@@ -9,7 +9,7 @@ The Natural Language Processing (NLP) and Retrieval-Augmented Generation (RAG) s
 - Providing a robust query system for retrieving historical incident data.
 - Generating detailed automated reports to support decision-making.
 
-.. figure:: images/RAG.png
+.. figure:: docs/images/RAG.png
    :align: center
    :width: 80%
 
