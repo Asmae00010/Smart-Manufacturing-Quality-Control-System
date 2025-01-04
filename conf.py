@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'RAG'
-copyright = '2024, GIIADS, CNN by Maalouf IMAD '
-author = 'imad maalouf'
+project = 'Smart Manufacturing Quality Control System'
+copyright = '2025, Smart Manufacturing Quality Control System Team'
+author = 'AFIFI ASMAE'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -8,7 +8,6 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    introduction
    core_concept
@@ -23,9 +22,7 @@ Getting Started
 ---------------
 To get started with the Smart Manufacturing Quality Control System, please refer to the **Installation** section for setup instructions.
 
-Core Concept
-------------
-An overview of the system's core concept and components is available in the **Core Concept** section.
+
 
 For more detailed information about using the system, refer to the **Usage** section.
 

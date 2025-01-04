@@ -1,1 +1,1 @@
-# RAG
+# Smart Manufacturing Quality Control System
