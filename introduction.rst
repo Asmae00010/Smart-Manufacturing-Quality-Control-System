@@ -7,7 +7,13 @@ Core Concept
 A system that monitors manufacturing equipment and products through multiple data streams to predict and detect defects.
 
 
-*adds pic of system architecture*
+ .. image:: Documentation\images\system_architecture.png
+   :width: 600px
+   :align: center
+
+
+
+
 *adds pic of home page*
 
 Components
