@@ -7,7 +7,7 @@ Core Concept
 A system that monitors manufacturing equipment and products through multiple data streams to predict and detect defects.
 
 
- .. image:: Documentation\images\system_architecture.png
+ .. image:: C:\Users\asmae\Desktop\Smart-Manufacturing-Quality-Control-System\Documentation\images\system_architecture.png
    :width: 600px
    :align: center
 
