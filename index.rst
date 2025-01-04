@@ -10,7 +10,6 @@ Contents
    :maxdepth: 2
 
    introduction
-   core_concept
    computer_vision
    time_series_analysis
    nlp_and_rag
