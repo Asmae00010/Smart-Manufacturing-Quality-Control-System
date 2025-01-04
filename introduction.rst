@@ -6,6 +6,10 @@ Core Concept
 ------------
 A system that monitors manufacturing equipment and products through multiple data streams to predict and detect defects.
 
+
+*adds pic of system architecture*
+*adds pic of home page*
+
 Components
 ----------
 1. **Computer Vision**

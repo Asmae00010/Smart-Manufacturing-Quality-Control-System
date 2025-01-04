@@ -12,10 +12,11 @@ Contents
 
    introduction
    core_concept
-   installation&usage
    computer_vision
    time_series_analysis
    nlp_and_rag
+   installation&usage
+   results
 
 
 Getting Started
@@ -28,8 +29,5 @@ An overview of the system's core concept and components is available in the **Co
 
 For more detailed information about using the system, refer to the **Usage** section.
 
-For developers looking to contribute, see the **Contributing** section for guidelines.
 
-License
--------
-This project is licensed under the terms of the MIT License. See the `LICENSE` file for details.
+
