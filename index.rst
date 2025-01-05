@@ -9,6 +9,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   team
    introduction
    computer_vision
    time_series_analysis
