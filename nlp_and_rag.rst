@@ -14,6 +14,7 @@ The Natural Language Processing (NLP) and Retrieval-Augmented Generation (RAG) s
    :width: 80%
 
    System Workflow Diagram: Illustrates the flow of user queries through the search and retrieval system, integration with a foundation model, and generation of factual answers using relevant company documents.
+
    *Source: [IBM](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-rag.html?context=wx)*
 
 Components
