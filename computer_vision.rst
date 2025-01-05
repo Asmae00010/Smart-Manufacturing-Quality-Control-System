@@ -32,6 +32,3 @@ The model showed robust performance:
 Implementation
 ------------
 The model is implemented using PyTorch and integrated into our Streamlit application for real-time defect detection.
-
-
-*add picture of an image test"
