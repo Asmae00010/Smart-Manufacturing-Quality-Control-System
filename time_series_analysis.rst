@@ -5,12 +5,6 @@ Purpose
 -------
 The Steel Manufacturing Monitor is a real-time dashboard application designed to track and analyze critical parameters in steel manufacturing processes. It provides comprehensive monitoring, forecasting, and statistical analysis of key manufacturing metrics.
 
-.. figure:: system_diagram.png
-   :align: center
-   :width: 80%
-
-   System Architecture: Real-time monitoring and forecasting pipeline for steel manufacturing parameters.
-
 Core Features
 ------------
 
