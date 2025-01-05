@@ -3,159 +3,180 @@ Steel Manufacturing Monitor
 
 Purpose
 -------
-The Steel Manufacturing Monitor is a real-time dashboard application designed to track and analyze critical parameters in steel manufacturing processes. It provides comprehensive monitoring, forecasting, and statistical analysis of key manufacturing metrics.
+The Steel Manufacturing Monitor is a Streamlit-based dashboard application for real-time monitoring and forecasting of critical steel manufacturing parameters. The system provides comprehensive tracking of six key parameters, statistical analysis, and predictive insights.
 
-Core Features
-------------
+System Overview
+--------------
 
-Monitoring Parameters
+Monitored Parameters
 ~~~~~~~~~~~~~~~~~~~
-The system tracks three essential manufacturing parameters:
+The system tracks six critical manufacturing parameters:
 
-- **Temperature**: 
+1. **Temperature**
     - Range: 1370-1540°C
-    - Critical for proper steel formation
-    - Real-time monitoring with alerts
-- **Elongation**: 
+    - Purpose: Monitor melting temperature
+    - Critical for: Material formation quality
+
+2. **Elongation**
     - Range: 15-25%
-    - Indicates material elasticity
-    - Quality control metric
-- **Energy Consumption**: 
+    - Purpose: Track material elasticity
+    - Critical for: Product quality control
+
+3. **Energy Consumption**
     - Range: 400-600 kWh/ton
-    - Efficiency monitoring
-    - Cost optimization metric
+    - Purpose: Monitor energy efficiency
+    - Critical for: Cost optimization
+
+4. **Cooling Rate**
+    - Range: 40-60°C/min
+    - Purpose: Track cooling process
+    - Critical for: Material structure formation
+
+5. **Contact Pressure**
+    - Range: 150-250 MPa
+    - Purpose: Monitor applied pressure
+    - Critical for: Material forming quality
+
+6. **Vibration**
+    - Range: 1.5-3.5 mm/s
+    - Purpose: Equipment health monitoring
+    - Critical for: Maintenance planning
+
+Core Functionality
+-----------------
 
 Data Management
 ~~~~~~~~~~~~~~
-- **Data Generation**: 
-    - Synthetic data creation for testing and demonstration
-    - Configurable time periods and frequencies
-    - Realistic value ranges based on industry standards
+.. code-block:: python
 
-- **Data Storage**:
-    - CSV file-based persistence
-    - Timestamp-based file naming
-    - JSON metadata tracking
-    - Automated directory management
+    def save_data(data, parameter):
+        """
+        Saves monitoring data and metadata to filesystem.
+        
+        Parameters:
+            data (DataFrame): Time series data
+            parameter (str): Monitored parameter name
+        
+        Returns:
+            str: Path to saved file
+        """
+
+Data Generation
+~~~~~~~~~~~~~~
+.. code-block:: python
+
+    def generate_data(start_date, periods=100):
+        """
+        Generates synthetic monitoring data.
+        
+        Parameters:
+            start_date (datetime): Start time for data generation
+            periods (int): Number of data points to generate
+        
+        Returns:
+            DataFrame: Generated time series data
+        """
 
 Forecasting System
 ~~~~~~~~~~~~~~~~~
-The application implements Facebook's Prophet algorithm for time series forecasting with the following features:
+Implements Facebook Prophet with the following configuration:
 
-- **Model Configuration**:
-    - 95% confidence interval
-    - Daily and weekly seasonality
-    - Hourly seasonality (period=24, Fourier order=5)
-    - Changepoint detection (prior scale=0.05)
-    - Seasonality prior scale=10.0
+- Interval width: 95%
+- Seasonality:
+    - Daily
+    - Weekly
+    - Hourly (period=24, Fourier order=5)
+- Changepoint detection:
+    - Prior scale: 0.05
+    - Range: 0.9
+- Seasonality prior scale: 10.0
 
-- **Forecast Outputs**:
-    - 24-hour future predictions
-    - Confidence intervals
-    - Trend analysis
-    - Seasonality decomposition
-
-User Interface
--------------
+User Interface Components
+------------------------
 
 Dashboard Layout
 ~~~~~~~~~~~~~~
-The application uses Streamlit's wide layout with two main columns:
+The application uses a wide layout with two main sections:
 
-Main Column (2/3 width):
+Main Column 
     - Real-time parameter monitoring
     - Historical data visualization
     - Forecast analysis plots
-
-Statistics Column (1/3 width):
-    - Current value metrics
-    - Statistical summaries
-    - Forecast statistics
-    - Distribution analysis
-
-Interactive Elements
-~~~~~~~~~~~~~~~~~~
-- **Parameter Selection**:
-    - Dropdown menu for metric selection
-    - Real-time plot updates
-    - Unit-aware displays
-
-- **Visualization**:
-    - Interactive Plotly charts
     - Range indicators
     - Confidence intervals
-    - Distribution histograms
 
-- **Data Export**:
-    - CSV download functionality
-    - Timestamped file naming
-    - Complete dataset export
+Statistics Column 
+    - Current value display
+    - Statistical summary
+    - Forecast statistics
+    - Distribution analysis
+    - Data download options
 
-Sample Data Format
-----------------
-The system processes time series data in the following format::
+Interactive Features
+~~~~~~~~~~~~~~~~~~
+- Parameter selection dropdown
+- Real-time plot updates
+- CSV data export
+- Interactive visualizations
+- Forecast explanation
+- Statistical analysis tables
 
-    datetime,Temperature,Elongation,Energy_Consumption
-    2024-12-23 16:08:30.233832,1447.0207266848824,20.591107332685088,512.2613687312416
-    2024-12-23 17:08:30.233832,1407.1661700792843,18.71565997113482,489.4908730863263
+Data Structure
+-------------
+
+Time Series Format
+~~~~~~~~~~~~~~~~
+The system processes data in the following format:
+
+.. code-block:: text
+
+    datetime,Temperature,Elongation,Energy_Consumption,Cooling_Rate,Contact_Pressure,Vibration
+    2024-01-05 10:00:00,1450.32,20.5,500.1,45.2,200.3,2.5
+    2024-01-05 11:00:00,1445.67,19.8,498.4,46.7,195.8,2.3
     ...
 
-Technical Implementation
-----------------------
+Metadata Structure
+~~~~~~~~~~~~~~~~
+.. code-block:: json
 
-Dependencies
-~~~~~~~~~~~
-- **Core Libraries**:
-    - streamlit: Web application framework
-    - pandas: Data manipulation
-    - numpy: Numerical computations
-    - plotly: Interactive visualizations
-    - prophet: Time series forecasting
-    - matplotlib: Additional plotting capabilities
+    {
+        "timestamp": "2024-01-05 10:00:00",
+        "parameter": "Temperature",
+        "data_points": 100,
+        "file_path": "data/steel_data_20240105100000.csv"
+    }
 
-Functions
-~~~~~~~~~
-save_data(data, parameter)
-    Persists monitoring data and metadata
-    
-    :param data: DataFrame containing time series data
-    :param parameter: String indicating the monitored parameter
-    :returns: String path to saved file
-
-generate_data(start_date, periods=100)
-    Creates synthetic monitoring data
-    
-    :param start_date: DateTime object for data start
-    :param periods: Integer number of data points
-    :returns: DataFrame with synthetic data
-
-create_forecast(data, parameter, periods=24)
-    Generates time series forecasts
-    
-    :param data: DataFrame with historical data
-    :param parameter: String parameter name
-    :param periods: Integer forecast horizon
-    :returns: Tuple of (forecast DataFrame, Prophet model)
 
 Performance Considerations
 ------------------------
 
-Data Handling
-~~~~~~~~~~~~
-- Efficient data generation and storage
-- Automatic cleanup of old files
-- Metadata tracking for audit purposes
+Data Processing
+~~~~~~~~~~~~~~
+- Efficient synthetic data generation
+- Optimized data storage
+- Automated file management
+- Real-time visualization updates
 
-Visualization
-~~~~~~~~~~~~
-- Responsive charts with optimization for large datasets
-- Efficient update cycles
-- Memory-conscious data management
+Memory Management
+~~~~~~~~~~~~~~~
+- Session state management
+- Efficient data structure usage
+- Optimized plot rendering
 
-Future Enhancements
-------------------
-1. Real-time data integration capabilities
-2. Advanced anomaly detection
-3. Multi-parameter correlation analysis
-4. Customizable alert thresholds
-5. Enhanced reporting capabilities
+
+Security Considerations
+---------------------
+
+Data Protection
+~~~~~~~~~~~~~~
+- Secure file storage
+- Metadata tracking
+- Access control implementation
+- Backup management
+
+Monitoring
+~~~~~~~~~~
+- Real-time parameter tracking
+- Threshold violation alerts
+- System health monitoring
+- Performance metrics tracking
