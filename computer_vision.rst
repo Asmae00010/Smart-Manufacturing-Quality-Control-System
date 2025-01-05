@@ -23,12 +23,14 @@ Dataset
 
 Performance
 ~~~~~~~~~~
-The model showed robust performance:
+The model demonstrated exceptional performance:
 
-- High accuracy on validation set
-- Good generalization on external images
-- Real-time inference capabilities
++ Achieved high accuracy on both training *(99.86%)* and validation *(100%)* sets.
++ Maintained low loss values, indicating strong optimization.
++ Generalized effectively to external datasets and unseen images.
++ Provided real-time inference with consistent efficiency.
 
 Implementation
 ------------
 The model is implemented using PyTorch and integrated into our Streamlit application for real-time defect detection.
+

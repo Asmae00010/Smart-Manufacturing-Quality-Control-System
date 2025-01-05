@@ -6,8 +6,11 @@ This section highlights the functionalities of our Smart Manufacturing Quality C
 Demo Video
 ----------
 Watch the video demonstration showcasing the integration of multiple functionalities of our application, including:
+
 - Defect detection with the **Computer Vision** module.
+
 - Real-time and forecasted metrics visualization with the **Time Series Analysis** module.
+
 - Querying past incidents and solutions using the **NLP/RAG** module.
 
 You can view the video here:
@@ -22,7 +25,9 @@ We have provided sample testing materials to explore the features of our applica
      `Defect Detection Test Images <https://drive.google.com/drive/u/0/folders/16-gLlKRBhdQHiPkAJ2m1SuxtFc8uVPu5>`_
 
 2. **Queries for the Chat Module**:
+
    - Evaluate the **NLP/RAG** capabilities by testing with pre-defined queries.
+   
    - Download the sample queries from:
      `Sample Chat Queries <https://drive.google.com/drive/u/0/folders/1ojy5dzd3wonQx1vOkOATHV-EN_IagD-w>`_
 
