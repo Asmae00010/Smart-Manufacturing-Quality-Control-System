@@ -1,0 +1,26 @@
+# System files and directories
+.cache/
+.vscode/
+.anaconda/
+.ipython/
+.jupyter/
+.spyder-py3/
+.matplotlib/
+.conda/
+*.lnk
+*.pkl
+*.ini
+~/Documents/
+~/Downloads/
+~/Pictures/
+~/Music/
+~/Videos/
+~/NTUSER.*
+
+# IDE files
+.eclipse/
+.idea/
+.DS_Store
+
+# Temporary files
+~*
