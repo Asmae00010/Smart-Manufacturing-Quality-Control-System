@@ -55,6 +55,8 @@ http://localhost:8501
 
 Example Usage
 -------------
+
+
 1. **Defect Detection**:
 
 - Go to the `Defect Detection` page.
